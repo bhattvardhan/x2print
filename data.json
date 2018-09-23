@@ -1,0 +1,10 @@
+[
+    {
+        "Title": "Ability to subscribe for offers",
+        "Description": "As a user I am able to subscribe to offers"
+    },
+    {
+        "Title": "Ability to use touch ID",
+        "Description": "As an X app user, I am able to log in using touch ID on my device"
+    }
+]

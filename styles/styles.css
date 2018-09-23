@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; outline: none; }
+html,body{height:100%;}
+body { font: 15px/22px Arial, Helvetica, sans-serif; color: #777;  overflow-x:hidden; padding-bottom:40px;}
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-family: Arial, Helvetica, sans-serif; }
+h2 { font-size: 20px; line-height: 28px; margin: 4px 0; }
+ul, li { list-style: none; }
+
+.story_listing { padding: 20px 0;}
+.story_listing li { float: left; width: 285px; float: left; position: relative; margin:12px 9px; border: solid 1px #d4d4d4;  }
+.story_listing li .txt p, .txt p{height:60px; overflow:hidden; }
