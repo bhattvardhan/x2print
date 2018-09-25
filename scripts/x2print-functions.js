@@ -15,14 +15,20 @@ const getStories = () => {
     return stories
 }
 
-const x2print = async (url, file) => {
+const x2print = async (url, f) => {
+    const data = new URLSearchParams()
+    
+    for (const pair of new FormData(f)) {
+        data.append(pair[0], pair[1]);
+    }
+    
     const response = await fetch(url, {
         method: 'POST',
-        body: file,
+        body: data,
         headers: {
-            'Accept': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-            'Content-Type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+            'Accept': 'application/json',
         },
+        enctype: 'multipart/form-data',
         mode: 'no-cors'
     })
 
@@ -36,7 +42,7 @@ const x2print = async (url, file) => {
 const generateStoriesDOM = (story) => {
     const storyListElement = document.createElement('li')
     const storyTitleElement = document.createElement('p')
-    
+
     storyTitleElement.textContent = story.title
     storyListElement.appendChild(storyTitleElement)
 
